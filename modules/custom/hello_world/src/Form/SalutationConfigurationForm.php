@@ -44,6 +44,9 @@ class SalutationConfigurationForm extends ConfigFormBase {
  * {@inheritdoc}
  */
  public function submitForm(array &$form, FormStateInterface $form_state) {
+	//print_r($form);
+	print_r($form_state);
+	exit;
    $this->config('hello_world.custom_salutation')
     ->set('salutation', $form_state->getValue('salutation'))
     ->save();
